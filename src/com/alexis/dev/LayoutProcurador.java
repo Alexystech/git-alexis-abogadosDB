@@ -24,7 +24,6 @@ public class LayoutProcurador extends JFrame{
 
         Conexion connectionToDB = new Conexion();
 
-
         INSERTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

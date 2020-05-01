@@ -24,11 +24,15 @@ public class MainClass {
         /**FirstLayoutDB myFirstLayout = new FirstLayoutDB();
 
         myFirstLayout.setVisible(true);
-         */
+
 
         LayoutProcurador layoutProcurador = new LayoutProcurador();
 
-        layoutProcurador.setVisible(true);
+        layoutProcurador.setVisible(true);*/
+
+        LayoutAsunto layoutAsunto = new LayoutAsunto();
+
+        layoutAsunto.setVisible(true);
     }
 
 }
