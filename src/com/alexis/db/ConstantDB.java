@@ -1,5 +1,12 @@
 package com.alexis.db;
 
+/**
+ * este clase me sirve para poder implementar las
+ * tablas de la base de datos abogadosDB
+ * notece que estan los nombres de las columnas
+ * de la base de datos ya mencionada
+ * **/
+
 public class ConstantDB {
     public static final String URL      = "jdbc:mysql://localhost:3306/";
     public static final String DB       = "abogadosDB";

@@ -5,6 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import static com.alexis.db.ConstantDB.*;
 
+/**
+ * esta clase la ocupo para establecer la conexion
+ * a la base de datos, solo tiene un metodo
+ * para instanciar
+ * */
+
 public class Conexion {
 
     public Conexion(){}

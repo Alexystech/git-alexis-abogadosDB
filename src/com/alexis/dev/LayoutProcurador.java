@@ -10,6 +10,12 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
 
+/**
+ * esta clase pertenece al procurador,
+ * esta la utilizo para hacer registros
+ * en la tabla procurador de la base de datos
+ * */
+
 public class LayoutProcurador extends JFrame{
     private JPanel procuradorPanel;
     private JTextField textField1;
