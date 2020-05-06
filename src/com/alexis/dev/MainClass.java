@@ -28,18 +28,10 @@ public class MainClass {
             System.out.println(myResultSet.getString(ConstantDB.TCLIENTE_NOMBRE));
         }
 
-        /**FirstLayoutDB myFirstLayout = new FirstLayoutDB();
+        PrincipalLayout principalLayout = new PrincipalLayout();
 
-        myFirstLayout.setVisible(true);
+        principalLayout.setVisible(true);
 
-
-        LayoutProcurador layoutProcurador = new LayoutProcurador();
-
-        layoutProcurador.setVisible(true);*/
-
-        LayoutAsunto layoutAsunto = new LayoutAsunto();
-
-        layoutAsunto.setVisible(true);
     }
 
 }

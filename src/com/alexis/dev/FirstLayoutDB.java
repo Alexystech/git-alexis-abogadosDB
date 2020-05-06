@@ -9,6 +9,7 @@ import java.sql.Statement;
 
 import com.alexis.db.Conexion;
 import com.alexis.db.ConstantDB;
+import com.alexis.dev.Constants;
 
 public class FirstLayoutDB extends JFrame{
     private JPanel clientePanel;
@@ -27,14 +28,12 @@ public class FirstLayoutDB extends JFrame{
         INSERTARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int clienteDNI          = Integer.parseInt(textField3.getText());
-                String clienteNombre    = textField2.getText();
-                String clienteDireccion = textField1.getText();
+                Constants.clienteDNI        = Integer.parseInt(textField3.getText());
+                Constants.nombreCliente     = textField2.getText();
+                Constants.direccionCliente  = textField1.getText();
 
-                System.out.println(clienteDNI);
-                System.out.println(clienteNombre);
-                System.out.println(clienteDireccion);
 
+                /**
                 try(Connection connection = connectionToDB.conectar()){
                     Statement myStatement = connection.createStatement();
                     String query = "INSERT INTO "+ConstantDB.TCLIENTE+" ("+ConstantDB.TCLIENTE_CLIENTEDNI+", "+
@@ -49,6 +48,11 @@ public class FirstLayoutDB extends JFrame{
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
+                 */
+                LayoutProcurador procuradorLayout = new LayoutProcurador();
+                procuradorLayout.setVisible(true);
+
+                setVisible(false);
             }
         });
     }

@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
 
+import com.alexis.dev.Constants;
+
 /**
  * esta clase pertenece al procurador,
  * esta la utilizo para hacer registros
@@ -33,10 +35,11 @@ public class LayoutProcurador extends JFrame{
         INSERTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int procuradorDNI           = Integer.parseInt(textField1.getText());
-                String procuradorNombre     = textField2.getText();
-                String procuradorDireccion  = textField3.getText();
+                Constants.procuradorDNI         = Integer.parseInt(textField1.getText());
+                Constants.nombreProcurador      = textField2.getText();
+                Constants.direccionProcurador   = textField3.getText();
 
+                /**
                 try (Connection connection = connectionToDB.conectar()){
                     Statement myStatement = connection.createStatement();
                     String query = "INSERT INTO "+ ConstantDB.TPROCURADOR +" ("+ConstantDB.TPROCURADOR_PROCURADORDNI+
@@ -48,6 +51,10 @@ public class LayoutProcurador extends JFrame{
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
+                 */
+                LayoutAsunto asuntoLayout = new LayoutAsunto();
+                asuntoLayout.setVisible(true);
+                setVisible(false);
             }
         });
     }

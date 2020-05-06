@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import com.alexis.dev.Constants;
+
 public class LayoutAsunto extends JFrame{
     private JPanel layoutAsunto;
     private JTextField textField1;
@@ -42,26 +44,40 @@ public class LayoutAsunto extends JFrame{
          * almacenado por el LocalDate funciona para hacer
          * el registro a la tabla de la bace de datos
          * */
+        String txtClienteDNI = Integer.toString(Constants.clienteDNI);
+        String txtProcuradorDNI = Integer.toString(Constants.procuradorDNI);
+
+        textField1.setText(txtClienteDNI);
+        textField2.setText(txtProcuradorDNI);
 
         INSERTARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int inicioDia    = Integer.parseInt(comboBox2.getSelectedItem().toString());
-                int inicioMes    = Integer.parseInt(comboBox3.getSelectedItem().toString());
-                int inicioAnio   = Integer.parseInt(comboBox4.getSelectedItem().toString());
+                Constants.inicioDia    = Integer.parseInt(comboBox2.getSelectedItem().toString());
+                Constants.inicioMes    = Integer.parseInt(comboBox3.getSelectedItem().toString());
+                Constants.inicioAnio   = Integer.parseInt(comboBox4.getSelectedItem().toString());
 
-                int archivoDia   = Integer.parseInt(comboBox5.getSelectedItem().toString());
-                int archivoMes   = Integer.parseInt(comboBox6.getSelectedItem().toString());
-                int archivoAnio  = Integer.parseInt(comboBox7.getSelectedItem().toString());
+                Constants.archivoDia   = Integer.parseInt(comboBox5.getSelectedItem().toString());
+                Constants.archivoMes   = Integer.parseInt(comboBox6.getSelectedItem().toString());
+                Constants.archivoAnio  = Integer.parseInt(comboBox7.getSelectedItem().toString());
 
-                boolean estadoAsunto = comboBox1.getSelectedItem().toString() == "vigente";
+                Constants.estadoAsunto = comboBox1.getSelectedItem().toString() == "vigente";
 
-                LocalDate fechaInicio = LocalDate.of(inicioAnio,inicioMes,inicioDia);
-                LocalDate fechaArchivo = LocalDate.of(archivoAnio,archivoMes,archivoDia);
+                //LocalDate fechaInicio = LocalDate.of(Constants.inicioAnio,Constants.inicioMes,Constants.inicioDia);
+                //LocalDate fechaArchivo = LocalDate.of(Constants.archivoAnio,Constants.archivoMes,Constants.archivoDia);
+
+                /**
+                 * la fecha la necesito en la clase donde se va
+                 * hacer la tupla para la base de datos
+                 * tengo penzado ponerlo en el principalLayout
+                 * cuando haga [subir a base de datos]
+                 * */
 
                 //System.out.println(fechaInicio.format(DateTimeFormatter.ofPattern("dd/MM/yy")));
                 //System.out.println(fechaArchivo.format(DateTimeFormatter.ofPattern("dd/MM/yy")));
 
+                PrincipalLayout principalLayout = new PrincipalLayout();
+                setVisible(false);
             }
         });
     }
