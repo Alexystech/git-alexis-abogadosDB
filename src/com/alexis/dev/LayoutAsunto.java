@@ -30,14 +30,7 @@ public class LayoutAsunto extends JFrame{
 
         Conexion connectionToDB = new Conexion();
 
-        /**
-         * me falta traer la informacion necesaria de
-         * la base de datos para llenar los campos
-         * DNIcliente y DNIprocurador especificamente de
-         * alguna variable 'static' que planeo declarar,
-         * donde me almacene el DNIcliente y el
-         * DNIprocurador.
-         * */
+
 
         /**
          * tengo que comprobar que el tipo de dato
@@ -76,7 +69,6 @@ public class LayoutAsunto extends JFrame{
                 //System.out.println(fechaInicio.format(DateTimeFormatter.ofPattern("dd/MM/yy")));
                 //System.out.println(fechaArchivo.format(DateTimeFormatter.ofPattern("dd/MM/yy")));
 
-                PrincipalLayout principalLayout = new PrincipalLayout();
                 setVisible(false);
             }
         });

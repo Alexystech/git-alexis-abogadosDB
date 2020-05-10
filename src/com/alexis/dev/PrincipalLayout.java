@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import com.alexis.dev.Constants;
 
 public class PrincipalLayout extends JFrame{
 
@@ -11,38 +14,41 @@ public class PrincipalLayout extends JFrame{
     private JPanel layoutPrincipal;
     private JButton SUBIRABASEDEButton;
 
-    public static boolean buttonEnable = true;
-
-    public void isButtonEnable(boolean buttonEnable){
-        if (buttonEnable) {
-            buttonPrincipal.setEnabled(true);
-        } else {
-            buttonPrincipal.setEnabled(false);
-        }
-    }
-
     public PrincipalLayout(){
         add(layoutPrincipal);
         setTitle("PRINCIPAL");
         setSize(400,200);
 
-        isButtonEnable(buttonEnable);
-
         buttonPrincipal.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstLayoutDB myLayout = new FirstLayoutDB();
+                ClienteDialog myClient = new ClienteDialog();
 
-                myLayout.setVisible(true);
-
-                buttonEnable = false;
-                isButtonEnable(buttonEnable);
+                myClient.setVisible(true);
             }
         });
 
-        /**
-         * necesito hacer que el buttonPrincipal se active al
-         * final de el ingreso de los datos
-         * */
+        SUBIRABASEDEButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (Constants.isButtonEnable) {
+                    /**
+                     * aqui tengo que conectar con la base de datos
+                     * y hacer los registros correspondientes con los
+                     * datos recolectados almacenados en la clase Constants
+                     * */
+                    JOptionPane.showMessageDialog(null,"Funciona"
+                            ,"alert"
+                            ,JOptionPane.INFORMATION_MESSAGE
+                    );
+                    Constants.isButtonEnable = false;
+                } else {
+                    JOptionPane.showMessageDialog(null,"No has llenado los datos"
+                            ,"Alert"
+                            ,JOptionPane.ERROR_MESSAGE
+                    );
+                }
+            }
+        });
     }
 }

@@ -47,7 +47,7 @@
         </constraints>
         <properties>
           <editable value="false"/>
-          <enabled value="true"/>
+          <enabled value="false"/>
         </properties>
       </component>
       <component id="c70a2" class="javax.swing.JLabel">
@@ -66,7 +66,7 @@
         </constraints>
         <properties>
           <editable value="false"/>
-          <enabled value="true"/>
+          <enabled value="false"/>
         </properties>
       </component>
       <component id="50387" class="javax.swing.JLabel">
