@@ -8,13 +8,6 @@ import java.sql.ResultSet;
 
 import com.alexis.db.ConstantDB;
 
-/**
- * esto esta claramente incompleto
- * necesito terminar los otros layouts
- * para juntar todo en un solo en
- * un primary layout
- * */
-
 public class MainClass {
 
     public static void main(String[] args) throws SQLException{

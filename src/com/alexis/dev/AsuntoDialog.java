@@ -38,7 +38,7 @@ public class AsuntoDialog extends JDialog {
                 Constants.archivoDia = Integer.parseInt(comboBox3.getSelectedItem().toString());
                 Constants.archivoMes = Integer.parseInt(comboBox2.getSelectedItem().toString());
                 Constants.archivoAnio = Integer.parseInt(comboBox1.getSelectedItem().toString());
-                Constants.estadoAsunto = comboBox7.getSelectedItem().toString() == "vigente";
+                Constants.estadoAsunto = comboBox7.getSelectedItem().toString();
 
                 Constants.isButtonEnable = true;
                 setVisible(false);

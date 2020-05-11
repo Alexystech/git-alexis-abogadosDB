@@ -22,7 +22,7 @@ public class Constants {
     public static int archivoDia            = 0;
     public static int archivoMes            = 0;
     public static int archivoAnio           = 0;
-    public static boolean estadoAsunto      = false;
+    public static String estadoAsunto       = "";
 
     public static boolean isButtonEnable = false;
 }
